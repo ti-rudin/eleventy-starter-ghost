@@ -19,8 +19,12 @@ const api = new ghostContentAPI({
 // Strip Ghost domain from urls
 const stripDomain = url => {
   let url2 = url.replace("http://localhost:2368", "");
-  let url3 = url2.replace(process.env.GHOST_API_URL, process.env.SITE_URL)
+  let url3 = url.replace(process.env.GHOST_API_URL, "");
   return url3;
+};
+const stripDomain2 = url => {
+
+  return 
 };
 
 module.exports = function(config) {
